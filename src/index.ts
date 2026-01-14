@@ -71,9 +71,11 @@ async function handleChatRequest(
 		const stream = await env.AI.run(
 			MODEL_ID,
 			{
-				messages,
-				max_tokens: 1024,
-				stream: true,
+				//messages,
+				//max_tokens: 1024,
+				//stream: true,
+				instructions: 'You are a concise assistant.',
+      			input: messages,
 			},
 			{
 				// Uncomment to use AI Gateway
